@@ -14,10 +14,14 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Try typing any of these keywords: help, products, menu...")
+    await menu_command(update, context)
 
 async def menu_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
-        [InlineKeyboardButton("🛍️ View Products", url="https://form.jotform.com/240791552407053")],
+        [
+            [InlineKeyboardButton("🛍️ View Products", url="https://form.jotform.com/240791552407053")],
+            [InlineKeyboardButton("📦 Telegram View", url="https://t.me/RexSuper_Bot/ahhhasdyyad")]
+        ],
         [InlineKeyboardButton("🌐 Visit Website", url="https://dbgaming.com/Games")],
         [InlineKeyboardButton("📢 Join Channel", url="https://t.me/dbgm001")]
     ]
